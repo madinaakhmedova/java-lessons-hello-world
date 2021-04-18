@@ -13,14 +13,14 @@ public class Main {
         System.out.println("Выберите размер массива");
         int size = scanner.nextInt();
 
-        int[] ar = new int[size];
-        for (int i = 0; i < ar.length; i++) {
+        int[] list = new int[size];
+        for (int i = 0; i < list.length; i++) {
             System.out.println("Введите число");
             int val = scanner.nextInt();
             if (val == x || val == y || val == z) {
                 System.out.println("Данное значение имеется в константах");
             }
-            ar[i] = val;
+            list[i] = val;
         }
     }
 }
