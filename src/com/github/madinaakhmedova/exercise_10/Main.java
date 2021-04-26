@@ -10,11 +10,11 @@ public class Main {
         System.out.println("Выберите размерность m матрицы");
         int m = scanner.nextInt();
 
-        int[][] matrix = new int[n][m];
+        double[][] matrix = new double[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 System.out.printf("Выберите элемент матрицы (%d, %d)\n", i, j);
-                int val = scanner.nextInt();
+                double val = scanner.nextDouble();
                 matrix[i][j] = val;
             }
         }

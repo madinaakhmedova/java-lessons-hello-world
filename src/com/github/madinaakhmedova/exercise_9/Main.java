@@ -16,7 +16,7 @@ public class Main {
             list[i] = val;
             total += val;
         }
-        double avg = total / ((double) size);
+        double avg = total / (size);
         System.out.printf("Среднее арифметическое: %f\n", avg);
 
         for (double x : list) {
