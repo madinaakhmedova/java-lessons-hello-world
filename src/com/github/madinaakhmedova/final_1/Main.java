@@ -11,6 +11,6 @@ public class Main {
         System.out.print("Количество рублей (можно не целое):");
         Double count = scanner.nextDouble();
 
-        System.out.printf("Итого: %.2f", rate * count);
+        System.out.printf("Итого: %.2f", count / rate);
     }
 }
