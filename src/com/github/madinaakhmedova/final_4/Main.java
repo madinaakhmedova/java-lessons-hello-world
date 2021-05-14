@@ -14,66 +14,31 @@ public class Main {
         System.out.println("Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает?");
 
         inCycle(scanner);
-//        simple(scanner);
     }
 
     private static void inCycle(Scanner scanner) {
-        for (int i = 0; i < 3; i++) {
+        int i = 0;
+        while (i < 3) {
             String v = scanner.nextLine();
             if (compare(v, ANSWER)) {
                 System.out.println("Правильно!");
                 return;
             }
-            if (i == 0 && compare(v, HELP)) {
-                // Подсказка
-                System.out.println("Это что-то из компьютерных программ");
-                v = scanner.nextLine();
-                if (compare(v, ANSWER)) {
-                    System.out.println("Правильно!");
-                    return;
+            if (compare(v, HELP)) {
+                // Подсказка не считается попыткой
+                if (i == 0) {
+                    System.out.println("Это что-то из компьютерных программ");
+                } else {
+                    System.out.println("Подсказкой можно восспользоваться только на 1-м шаге и только 1 раз");
                 }
+                continue;
             }
             if (i < 2) {
                 System.out.println("Подумай еще!");
             }
+            i++;
         }
 
-        System.out.println("Обидно, приходи в другой раз!");
-    }
-
-    private static void simple(Scanner scanner) {
-
-        // Попытка 1
-        String v = scanner.nextLine();
-        if (compare(v, ANSWER)) {
-            System.out.println("Правильно!");
-            return;
-        }
-        if (compare(v, HELP)) {
-            // Подсказка
-            System.out.println("Это что-то из компьютерных программ");
-            v = scanner.nextLine();
-            if (compare(v, ANSWER)) {
-                System.out.println("Правильно!");
-                return;
-            }
-        }
-        System.out.println("Подумай еще!");
-
-        // Попытка 2
-        v = scanner.nextLine();
-        if (compare(v, ANSWER)) {
-            System.out.println("Правильно!");
-            return;
-        }
-        System.out.println("Подумай еще!");
-
-        // Попытка 3
-        v = scanner.nextLine();
-        if (compare(v, ANSWER)) {
-            System.out.println("Правильно!");
-            return;
-        }
         System.out.println("Обидно, приходи в другой раз!");
     }
 
