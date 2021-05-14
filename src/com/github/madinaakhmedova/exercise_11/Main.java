@@ -15,8 +15,9 @@ public class Main {
         boolean equals = val1.equals(val2);
         System.out.println(equals);
         if (!equals) {
-            double v = Math.min(val2, iVal);
-            System.out.println(v);
+            double max = Math.max(val2, iVal);
+            double min = Math.min(val2, iVal);
+            System.out.printf("Наибольее число - %f\nНаименьшее число - %f", max, min);
         } else {
             System.out.println("Числа равны");
         }
